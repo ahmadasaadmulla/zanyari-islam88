@@ -1,0 +1,2391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زانیاری ئیسلامییه کان</title>
+</head>
+<body>
+    
+
+
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZANYARI ISLAMI - زانيارى ئيسلامى</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #0e5670;
+            --secondary-color: #0e5670;
+            --accent-color: #0e5670;
+            --text-color: #0b446a;
+            --light-text: #0e5670;
+            --dark-green: #0e5670;
+            --sky-blue: #87CEEB;
+            --islamic-green: #009000;
+            --gold: #D4AF37;
+        }
+
+        body {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+            background-image: linear-gradient(to bottom, var(--sky-blue), white);
+        }
+
+        /* Mosque Pattern Background */
+        .mosque-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.05;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%230e5670" d="M50 0 L60 10 L70 0 L80 10 L90 0 L100 10 L100 30 L90 20 L80 30 L70 20 L60 30 L50 20 L40 30 L30 20 L20 30 L10 20 L0 30 L0 10 L10 0 L20 10 L30 0 L40 10 L50 0 Z"/></svg>');
+            background-size: 200px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-green));
+            color: var(--light-text);
+            padding: 1rem 5%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 100;
+            border-bottom: 3px solid var(--sky-blue);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #ffffff, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #fff;
+            }
+            to {
+                text-shadow: 0 0 15px #fff;
+            }
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a:hover {
+            color: var(--sky-blue);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--sky-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            background-color: var(--dark-green);
+            padding: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 99;
+            border-top: 2px solid var(--sky-blue);
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            color: white;
+            padding: 0.8rem;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding-right: 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            position: relative;
+            overflow: hidden;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%230e5670" fill-opacity="0.1" d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 10;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            padding: 0.8rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Mosque Animation */
+        .mosque-animation {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            right: 10%;
+            animation: float 6s ease-in-out infinite;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%230e5670" d="M256 0L0 128v256h512V128L256 0zm0 48l192 104v56H64v-56l192-104zM64 256h384v128H64V256z"/></svg>') center/contain no-repeat;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Kaaba Icon */
+        .kaaba-icon {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            bottom: 10%;
+            left: 10%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="%230e5670" d="M256 0L0 128v256h512V128L256 0zm0 48l192 104v56H64v-56l192-104zM64 256h384v128H64V256z"/></svg>') center/contain no-repeat;
+            animation: pulse 4s ease-in-out infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Prayer Times Section */
+        .prayer-times {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .prayer-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-green));
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .prayer-card.active {
+
+            transform: scale(1.05);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .prayer-name {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .prayer-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        .section {
+            padding: 5rem 5%;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--sky-blue), var(--primary-color));
+            border-radius: 2px;
+        }
+
+        /* Features Section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            border-top: 5px solid var(--sky-blue);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--sky-blue), var(--primary-color));
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            background-color: rgba(135, 206, 235, 0.2);
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        /* Quran Section */
+        .quran-container {
+            display: flex;
+            gap: 5rem;
+            margin-top: 2rem;
+        }
+
+        .surah-list-container {
+            flex: 1;
+        }
+
+        .surah-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .surah-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-left: 4px solid var(--sky-blue);
+        }
+
+        .surah-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            background-color: rgba(135, 206, 235, 0.05);
+        }
+
+        .surah-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .surah-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .surah-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .quran-player {
+            flex: 1;
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 20px;
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .player-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .player-title h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .player-title p {
+            color: #666;
+        }
+
+        .player-controls {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .control-btn {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .control-btn:hover {
+            background-color: var(--dark-green);
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .audio-player {
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .tafsir-container {
+            margin-top: 2rem;
+            background-color: rgba(135, 206, 235, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--sky-blue);
+        }
+
+        .tafsir-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Hadith Section */
+        .hadith-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .hadith-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .hadith-reference {
+            text-align: left;
+            font-style: italic;
+            color: #666;
+        }
+
+        .hadith-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+        }
+
+        /* Books Section */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .book-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-cover {
+            height: 200px;
+            background-color: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(135, 206, 235, 0.3), rgba(14, 86, 112, 0.3));
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-info {
+            padding: 1.5rem;
+        }
+
+        .book-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .book-info .author {
+            color: #666;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .book-info .description {
+            color: #666;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .book-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .download-btn, .read-btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-btn:hover {
+            background-color: var(--dark-green);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .read-btn {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .read-btn:hover {
+            background-color: #e9e9e9;
+        }
+
+        /* Fiqh Section */
+        .fiqh-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .fiqh-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .fiqh-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .fiqh-header {
+            background: linear-gradient(to right, var(--sky-blue), var(--primary-color));
+            color: white;
+            padding: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .fiqh-content {
+            padding: 1.5rem;
+        }
+
+        .fiqh-item {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .fiqh-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .fiqh-item h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-icon {
+            background: linear-gradient(to bottom right, var(--sky-blue), var(--primary-color));
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-content h4 {
+            margin-bottom: 0.3rem;
+            color: var(--primary-color);
+        }
+
+        .info-content p {
+            color: #666;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom right, var(--sky-blue), var(--primary-color));
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-form {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--sky-blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.3);
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: linear-gradient(to right, var(--sky-blue), var(--primary-color));
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(to right, var(--primary-color), var(--sky-blue));
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-green));
+            color: white;
+            padding: 3rem 5%;
+            margin-top: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%2387CEEB" fill-opacity="0.1" d="M30 10 L50 30 L70 10 L90 30 L90 50 L70 30 L50 50 L30 30 L10 50 L10 30 L30 10 Z"/></svg>');
+            background-size: 200px;
+            opacity: 0.1;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #ffffff, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .footer-about p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-links h3, .footer-newsletter h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-links h3::after, .footer-newsletter h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--sky-blue);
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.3rem 0;
+        }
+
+        .footer-links a:hover {
+            color: var(--sky-blue);
+            padding-right: 0.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            margin-top: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            background-color: var(--sky-blue);
+            color: white;
+            border: none;
+            padding: 0 1.5rem;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background-color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.7);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Button Styles */
+        button {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        img {
+            width: 200px;
+            padding: 20px;
+            border-radius: 5px;
+            transition: all 0.5s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        hr {
+            width: 100%;
+            padding: 2px;
+            background: linear-gradient(to right, transparent, var(--sky-blue), transparent);
+            border: none;
+            margin: 2rem 0;
+        }
+
+        /* Button from Uiverse.io */
+        .button-name {
+            align-items: center;
+            appearance: none;
+            background: linear-gradient(to right, var(--sky-blue), var(--primary-color));
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+            color: #ffffff;
+            cursor: pointer;
+            display: inline-flex;
+            height: 60px;
+            padding: 0 25px;
+            width: 310px;
+            justify-content: center;
+            line-height: 1px;
+            list-style: none;
+            overflow: hidden;
+            position: relative;
+            text-align: left;
+            text-decoration: none;
+            transition: box-shadow 0.15s, transform 0.15s;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            will-change: box-shadow, transform;
+            font-size: 15px;
+            margin: 0.5rem;
+            border: none;
+        }
+
+        .button-name:focus {
+            box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.5);
+        }
+
+        .button-name:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transform: translateY(-2px);
+            background: linear-gradient(to right, var(--primary-color), var(--sky-blue));
+        }
+
+        .button-name:active {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+            transform: translateY(5px);
+        }
+
+        /* Islamic Calendar */
+        .calendar-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .calendar-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .calendar-nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .calendar-nav button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .calendar-nav button:hover {
+            background-color: var(--dark-green);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+        }
+
+        .calendar-day-header {
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-color);
+            padding: 0.5rem;
+        }
+
+        .calendar-day {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 0.5rem;
+            text-align: center;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .calendar-day.hijri {
+            background-color: rgba(14, 86, 112, 0.1);
+        }
+
+        .calendar-day.today {
+            background-color: var(--sky-blue);
+            color: white;
+            font-weight: bold;
+        }
+
+        .day-number {
+            font-size: 1.2rem;
+        }
+
+        .hijri-date {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .calendar-day.today .hijri-date {
+            color: white;
+        }
+
+        /* English Calendar */
+        .english-calendar-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .english-calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .english-calendar-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .english-calendar-nav {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .english-calendar-nav button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .english-calendar-nav button:hover {
+            background-color: var(--dark-green);
+        }
+
+        .english-calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.5rem;
+        }
+
+        .english-calendar-day-header {
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-color);
+            padding: 0.5rem;
+        }
+
+        .english-calendar-day {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 0.5rem;
+            text-align: center;
+            min-height: 60px;
+        }
+
+        .english-calendar-day.today {
+            background-color: var(--sky-blue);
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .quran-container {
+                flex-direction: column;
+            }
+            
+            .quran-player {
+                position: static;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 5rem;
+                height: auto;
+            }
+            
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 3rem;
+            }
+            
+            .mosque-animation {
+                position: relative;
+                right: auto;
+                margin-top: 2rem;
+                width: 300px;
+                height: 300px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .section {
+                padding: 3rem 5%;
+                margin: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .delay-1 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+        }
+
+        /* Islamic Pattern Overlay */
+        .islamic-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%230e5670" fill-opacity="0.05" d="M50 0 L60 10 L70 0 L80 10 L90 0 L100 10 L100 30 L90 20 L80 30 L70 20 L60 30 L50 20 L40 30 L30 20 L20 30 L10 20 L0 30 L0 10 L10 0 L20 10 L30 0 L40 10 L50 0 Z"/></svg>');
+            background-size: 200px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Crescent Moon */
+        .crescent-moon {
+            position: fixed;
+            top: 10%;
+            right: 10%;
+            width: 100px;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%230e5670" fill-opacity="0.3" d="M50 0 A50 50 0 1 1 50 100 A40 40 0 1 0 50 0 Z"/></svg>') center/contain no-repeat;
+            animation: float 8s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        /* Islamic Calligraphy */
+        .calligraphy {
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin: 2rem 0;
+            line-height: 1.6;
+        }
+
+        /* Islamic Geometric Patterns */
+        .geometric-pattern {
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon fill="%230e5670" fill-opacity="0.1" points="50 0, 100 50, 50 100, 0 50"/></svg>');
+            background-size: 50px;
+            margin: 2rem 0;
+        }
+
+        /* Prayer Mat Design */
+        .prayer-mat {
+            width: 200px;
+            height: 250px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--dark-green));
+            border-radius: 20px;
+            position: relative;
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .prayer-mat::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 30px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><path fill="%23ffffff" d="M50 0 Q60 20 50 20 Q40 20 50 0 Z"/></svg>') center/contain no-repeat;
+        }
+
+        /* Tasbih Counter */
+        .tasbih-counter {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .tasbih-count {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+
+        .tasbih-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 0 0.5rem;
+        }
+
+        .tasbih-btn:hover {
+            background-color: var(--dark-green);
+            transform: scale(1.1);
+        }
+
+        .tasbih-reset {
+            background-color: #f5f5f5;
+            color: var(--primary-color);
+            border: 1px solid #ddd;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+
+        /* Islamic Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+
+        /* Hijri Date Display */
+        .hijri-date-display {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border-top: 5px solid var(--sky-blue);
+        }
+
+        .hijri-date-display h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .hijri-date-text {
+            font-size: 2rem;
+            color: var(--dark-green);
+            font-weight: bold;
+        }
+
+        .ramadan-info {
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="mosque-pattern"></div>
+    <div class="islamic-pattern"></div>
+    <div class="crescent-moon"></div>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\photo_2025-09-07_15-29-01.jpg" alt="Logo">
+            
+                
+                 
+            </div>
+            
+            <div class="nav-links">
+                <a href="#prophet-life"><button><h2>ژیانی پێغه مبه ر</h2></button></a>
+                <a href="#telegram"><button><h2>چه ناڵی تیلیگرام</h2></button></a>
+                <a href="#books"><button><h2>پایه کانی ئیسلام</h2></button></a>
+                <a href="#contact"><button><h2>په یوه ندی</h2></button></a>
+            </div>
+            <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\photo_2025-11-16_22-20-15.jpg" alt="Logo" align="right">
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+       
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">سەرەتا</a>
+            <a href="#features">تایبەتمەندییەکان</a>
+            <a href="#quran">قورئان</a>
+            <a href="#hadith">حدیث</a>
+            <a href="#fiqh">فقه</a>
+            <a href="#books">پەرتووک</a>
+            <a href="#contact">پەیوەندی</a>
+        </div>
+    </header>
+<br><br>
+ <center align="center">
+<button><h1>بەخێربێن بۆ زانيارى ئيسلامى</button></h1>
+
+
+<button><h1>سەرچاوەیەک پر له زانست و زانیاری و هه موو به شه کانی ئیسلامی له خۆده گرێت</button></h1>
+
+    <section class="hero" id="home">
+
+        <div class="hero-content fade-in">
+        </div>
+
+
+    </section>
+
+    <!-- Hijri Date Display Section -->
+    <section class="hijri-date-display">
+
+        <div class="hijri-date-text" id="hijri-date"></div>
+        <div class="ramadan-info" id="ramadan-info"></div>
+    </section>
+
+    <!-- Prayer Times Section -->
+    <section class="section" id="prayer-times">
+
+        <div class="prayer-times">
+            <div class="" id="fajr">
+                
+            </div>
+            
+            <div class="" id="">
+           
+
+            </div>
+
+            <div class="" id="asr">
+             
+               
+            </div>
+
+            <div class="" id="maghrib">
+
+                
+            </div>
+
+            <div class="" id="isha">
+           
+                
+           </div>
+           
+            <div class="" id="isha">
+
+                
+                 </div>
+ 
+            <div class="" id="isha">
+           
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Islamic Calendar Section -->
+    <section class="section" id="islamic-calendar">
+        <h2 class="section-title">کالێندەری ئیسلامی</h2>
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <div class="calendar-title" id="hijri-month-year"></div>
+                <div class="calendar-nav">
+                    <button id="prev-month"><h2>مانگی پێشتر</h2></button>
+                    <button id="next-month"><h2>مانگی نوێ</h2></button>
+                </div>
+            </div>
+            <div class="calendar-grid" id="calendar-grid">
+                <!-- Calendar will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- English Calendar Section -->
+    <section class="section" id="english-calendar">
+        <h2 class="section-title">مانگه کان</h2>
+        <div class="english-calendar-container">
+            <div class="english-calendar-header">
+                <div class="english-calendar-title" id="english-month-year">July 2025</div>
+                <div class="english-calendar-nav">
+                    <button id="english-prev-month"><i class="fas fa-chevron-right"></i><h2>مانگی پێشتر</h2></button>
+                    <button id="english-next-month"><h2>مانگی نوێ</h2><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+            <div class="english-calendar-grid" id="english-calendar-grid">
+                <!-- Calendar will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="features">
+        <h2 class="section-title fade-in">تایبەتمەندییەکان</h2>
+        <div class="features">
+            <div class="feature-card fade-in delay-1">
+                <div class="feature-icon">
+                    <i class="fas fa-quran"></i>
+                </div>
+                <h1>سوره ته کانی قورئان به نووسین</h1>
+                <br>
+                <h3>کلیک له خواره وه بکه</h3>
+                <br>
+                <a href=""><button class="button-name" role="button"><h1>1--10</h1></button></a>
+                 <a href=""><button class="button-name" role="button"><h1>11--23</h1></button></a>
+                  <a href=""><button class="button-name" role="button"><h1>24--35</h1></button></a>
+                   <a href=""><button class="button-name" role="button"><h1>36--46</h1></button></a>
+                    <a href=""><button class="button-name" role="button"><h1>47--57</h1></button></a>
+                <a href=""><button class="button-name" role="button"><h1>58--68</h1></button></a>
+                 <a href=""><button class="button-name" role="button"><h1>69--79</h1></button></a>
+                  <a href=""><button class="button-name" role="button"><h1>80--90</h1></button></a>
+                   <a href=""><button class="button-name" role="button"><h1>91--101</h1></button></a>
+                    <a href=""><button class="button-name" role="button"><h1>102--112</h1></button></a>
+                     <a href=""><button class="button-name" role="button"><h1>113--114</h1></button></a>
+            </div>
+ 
+            <div class="feature-card fade-in delay-3">
+                <div class="feature-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h1>نوێژه کان به راست و هه ڵه به وێنه</h1>
+
+                <br>
+                <h3>کلیک له خواره وه بکه</h3>
+                <a href="https://ibb.co/KYB9RJT"><button class="button-name" role="button"><h1>نوێژ کردن</h1></button></a>
+                 <a href="https://ibb.co/Q7BLkP48"><button class="button-name" role="button"><h1>رکوع بردن</h1></button></a>
+                  <a href="https://ibb.co/wNfB8ztr"><button class="button-name" role="button"><h1>دانیشتن</h1></button></a>
+                   <a href="https://ibb.co/2Y5g13Cx"><button class="button-name" role="button"><h1>ته حیات</h1></button></a>
+                    <a href="https://ibb.co/Nd4xqvXk"><button class="button-name" role="button"><h1>سه لام دانه وه</h1></button></a>
+                    <br><br><br>
+                    <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\photo_2025-11-16_21-16-26.jpg">
+                    <br><br><br><br><br><br>
+                    <button> <h1>به ئاسانترین شێوه فێری نوێژ ببه  ⏫</h1></button>
+
+
+                    <style>
+                        img{
+                            width: 300px;
+                        }
+                    </style>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="features">
+        <h2 class="section-title fade-in">تایبەتمەندییەکان</h2>
+        <div class="features">
+            <div class="feature-card fade-in delay-1">
+                <div class="feature-icon">
+                    <i class="fas fa-quran"></i>
+                </div>
+                <h1>سوره ته کانی قورئان پیرۆز به وێنه</h1>
+                <br>
+                <h3>کلیک له خواره وه بکه</h3>
+                <br>
+                <a href="https://ibb.co/5xg0qDkX"><button class="button-name" role="button"><h1>نوێژکردن چییه وێنه</h1></button></a>
+                <a href="https://ibb.co/j9cwBfcH"><button class="button-name" role="button"><h1>هه ڵگرتنی ده ست نوێژ</h1></button></a>
+                <a href="https://ibb.co/q3t3pxYb"><button class="button-name" role="button"><h1>5 فه رزه کان چییه</h1></button></a>
+            </div>
+ 
+            <div class="feature-card fade-in delay-3">
+                <div class="feature-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <br>
+                <h3>کلیک له خواره وه بکه</h3>
+               <a href="https://ibb.co/9mxn7WYV"><button class="button-name" role="button"><h1>ناوه کانی خودا</h1></button></a>
+               <br><br><br><br><br>
+                <button> <h1>به ئاسانترین شێوه فێری ناوه کانی خودا ببه</h1></button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section" id="features">
+        <h2 class="section-title fade-in">36 فه رمووده کان</h2>
+        <div class="features">
+            <div class="feature-card fade-in delay-1">
+                <div class="feature-icon">
+                    <i class="fas fa-quran"></i>
+                </div>
+                <br><hr>
+                <a href="https://ibb.co/LdQz3CxJ"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/3mPvCmCd"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/nsR3JJSB"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/chb8VyqG"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/p64VFmd7"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/YFPH6Yq4"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/bgRZqMSn"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/B9HyfXL"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/N2rx8L84"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/ycgBrBxF"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/bM6S8ym2"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/9R29XVr"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+            </div>
+            <div class="feature-card fade-in delay-2">
+                <div class="feature-icon">
+                    <i class="fas fa-quran"></i>
+                </div>
+                <br><hr>
+                <a href="https://ibb.co/4wGv0GyR"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/3md07JmH"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/7N4v1fxQ"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/bRPMzPLB"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/hF9vLhpR"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/zhrYRH2g"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/PR8M6R6"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/jZxZGfrK"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/N6j6z0KG"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/v4p6cvnv"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/Jjhh1qTd"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/gbGthVDV"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+
+            </div>
+            <div class="feature-card fade-in delay-3">
+                <div class="feature-icon">
+                    <i class="fas fa-quran"></i>
+                </div>
+
+                <br><hr>
+                <a href="https://ibb.co/W4HPsxJD"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/hJdg03Wm"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/fGtsXBxr"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/fdgcKcQb"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/7J7Fv94b"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/N2d8Nj5B"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/yn7sHDMr"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/cKtvx8Fr"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/Rp8RHRjW"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/XGS0Qss"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/33xDnH9"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+                <a href="https://ibb.co/sdFp9N1C"><button class="button-name" role="button"><h1> فه رمووده</h1></button></a>
+ 
+            </div>
+        </div>
+    </section>
+
+    <!-- Tasbih Counter Secton -->
+    <section class="section" id="tasbih">
+        <h2 class="section-title">ژمێری ته سبێح</h2>
+        <div class="tasbih-counter">
+            <div class="tasbih-count" id="tasbih-count">0</div>
+            <button class="tasbih-btn" id="tasbih-add"><i class="fas fa-plus"></i></button>
+            <button class="tasbih-reset" id="tasbih-reset"><h1>پاککردنه وه</h1></button>
+        </div>
+    </section>
+
+    <section class="section" id="quran">
+        <h2 class="section-title">سوڕەته کانی قورئانی پیرۆز</h2>
+        <div class="quran-container">
+            <div class="surah-list-container">
+                <div class="features">
+                    <div class="feature-card fade-in delay-1">
+                        <div class="feature-icon">
+                            <i class="fas fa-quran"></i>
+                        </div>
+                        <br>
+                        <a href="https://quran.com/ar/1"><button class="button-name" role="button"><h1>سوره تی الفاتحه</h1></button></a>
+                        <a href="https://quran.com/ar/2"><button class="button-name" role="button"><h1>سوره تی بقره</h1></button></a>
+                        <a href="https://quran.com/ar/3"><button class="button-name" role="button"><h1>سوره تی العمران</h1></button></a>
+                        <a href="https://quran.com/ar/4"><button class="button-name" role="button"><h1>سوره تی النساء</h1></button></a>
+                        <a href="https://quran.com/ar/5"><button class="button-name" role="button"><h1>سوره تی المائدة</h1></button></a>
+                        <a href="https://quran.com/ar/6"><button class="button-name" role="button"><h1>سوره تی الانعام</h1></button></a>
+                        <a href="https://quran.com/ar/7"><button class="button-name" role="button"><h1>سوره تی الاعراف</h1></button></a>
+                        <a href="https://quran.com/ar/8"><button class="button-name" role="button"><h1>سوره تی الانفال</h1></button></a>
+                        <a href="https://quran.com/ar/9"><button class="button-name" role="button"><h1>سوره تی التوبه</h1></button></a>
+                        <a href="https://quran.com/ar/10"><button class="button-name" role="button"><h1>سوره تی یونس</h1></button></a>
+                        <a href="https://quran.com/41"><button class="button-name" role="button"><h1>سوره تی فصلت</h1></button></a>
+                        <a href="https://quran.com/ar/30"><button class="button-name" role="button"><h1>سوره تی الشوری</h1></button></a>
+                         <a href="https://quran.com/ar/43"><button class="button-name" role="button"><h1>سوره تی الزخرف</h1></button></a>
+                        <a href="https://quran.com/ar/44"><button class="button-name" role="button"><h1>سوره تی الدخان</h1></button></a>
+                        <a href="https://quran.com/ar/45"><button class="button-name" role="button"><h1>سوره تی الجاثیه</h1></button></a>
+                    </div>
+                    <div class="feature-card fade-in delay-2">
+                        <div class="feature-icon">
+                            <i class="fas fa-quran"></i>
+                        </div>
+                        <br>
+                        <a href="https://quran.com/ar/11"><button class="button-name" role="button"><h1>سوره تی هود</h1></button></a>
+                        <a href=" https://quran.com/ar/12"><button class="button-name" role="button"><h1>سوره تی یوسف</h1></button></a>
+                        <a href=" https://quran.com/ar/ar-rad"><button class="button-name" role="button"><h1>سوره تی الرعد</h1></button></a>
+                        <a href=" https://quran.com/ar/14"><button class="button-name" role="button"><h1>سوره تی  ابراهیم</h1></button></a>
+                        <a href=" https://quran.com/ar/15"><button class="button-name" role="button"><h1>سوره تی الحجر</h1></button></a>
+                        <a href=" https://quran.com/ar/16"><button class="button-name" role="button"><h1>سوره تی  النحل</h1></button></a>
+                        <a href=" https://quran.com/ar/17"><button class="button-name" role="button"><h1>سوره تی الاسراء</h1></button></a>
+                        <a href=" https://quran.com/ar/18"><button class="button-name" role="button"><h1>سوره تی الکهف</h1></button></a>
+                        <a href=" https://quran.com/ar/19"><button class="button-name" role="button"><h1>سوره تی مریم</h1></button></a>
+                        <a href=" https://quran.com/ar/20"><button class="button-name" role="button"><h1>  سوره تي لقمان</h1></button></a>
+                        <a href="https://quran.com/ar/30"><button class="button-name" role="button"><h1>سوره تی السجده</h1></button></a>
+                         <a href="https://quran.com/ar/33"><button class="button-name" role="button"><h1>سوره تی الاحزاب</h1></button></a>
+                        <a href="https://quran.com/ar/34"><button class="button-name" role="button"><h1>سوره تی سبا</h1></button></a>
+                         <a href="https://quran.com/ar/35"><button class="button-name" role="button"><h1>سوره تی فاطر</h1></button></a>
+                         <a href="https://quran.com/ar/36"><button class="button-name" role="button"><h1>سوره تی یس</h1></button></a>
+                    </div>
+                    <div class="feature-card fade-in delay-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-quran"></i>
+                        </div>
+                        <br>
+                        <a href="https://quran.com/ar/21"><button class="button-name" role="button"><h1>سوره تی الأنبيا</h1></button></a>
+                        <a href="https://quran.com/ar/22"><button class="button-name" role="button"><h1>سوره تی الحج</h1></button></a>
+                        <a href="https://quran.com/ar/23"><button class="button-name" role="button"><h1>سوره تی المومنون</h1></button></a>
+                        <a href="https://quran.com/ar/24"><button class="button-name" role="button"><h1>سوره تی النور</h1></button></a>
+                        <a href="https://quran.com/ar/25"><button class="button-name" role="button"><h1>سوره تی الفرقان</h1></button></a>
+                        <a href="https://quran.com/ar/26"><button class="button-name" role="button"><h1>سوره تی الشعراء</h1></button></a>
+                        <a href="https://quran.com/ar/27"><button class="button-name" role="button"><h1>سوره تی النمل</h1></button></a>
+                        <a href="https://quran.com/ar/28"><button class="button-name" role="button"><h1>سوره تی القصص</h1></button></a>
+                        <a href="https://quran.com/ar/29"><button class="button-name" role="button"><h1>سوره تی العنکبوت</h1></button></a>
+                        <a href="https://quran.com/ar/30"><button class="button-name" role="button"><h1>سوره تی الروم</h1></button></a>
+                        <a href="https://quran.com/ar/30"><button class="button-name" role="button"><h1>سوره تی الصافات</h1></button></a>
+                        <a href=" https://quran.com/ar/20"><button class="button-name" role="button"><h1>  سوره تي ص</h1></button></a>
+                        <a href="https://quran.com/ar/112"><button class="button-name" role="button"><h1>سوره تی الاخلاص</h1></button></a>
+                         <a href="https://quran.com/ar/39"><button class="button-name" role="button"><h1>سوره تی الزمر</h1></button></a>
+                         <a href="https://quran.com/ar/40"><button class="button-name" role="button"><h1>سوره تی غافر</h1></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="gallery">
+        <h2 class="section-title">زیکره کانی ئیسلام</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\لااله الا الله.jpg" alt="Mosque">
+                <div class="gallery-caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\سبحان الله.jpg" alt="Quran">
+                <div class="gallery-caption"> </div>
+            </div>
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\الحمدالله.jpg" alt="Kaaba">
+                <div class="gallery-caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\photo_2025-11-15_19-48-43.jpg" alt="Islamic Art">
+                <div class="gallery-caption"></div><br><br>
+            </div>
+        
+    </section>
+
+    <section class="section" id="gallery">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\OIP.webp" alt="Mosque">
+                <div class="gallery-caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\photo_2025-11-15_19-45-05.jpg" alt="Quran">
+                <div class="gallery-caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\الله.jpg" alt="Kaaba">
+                <div class="gallery-caption"></div>
+            </div>
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\photo_2025-11-15_19-45-09.jpg" alt="Islamic Art">
+                <div class="gallery-caption"></div><br><br>
+            </div>
+        
+    </section>
+
+    <center align="center">
+        <section class="section" id="hadith">
+            <div class="">
+                <div class="" id="hadith-text">
+                </div>
+            </div>
+        </section>
+    </center>
+
+    <!-- Islamic Gallery Section -->
+    <section class="section" id="gallery">
+        <h2 class="section-title">ئیسلامییه کان</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\photo_2025-11-15_19-36-44.jpg" alt="Mosque">
+                <div class="gallery-caption"><h3>پێغه مبه ر سه لامی خوای لێبیت</h3></div>
+            </div>
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\mini-simple-mosque-photograpy_784737-286.jpg" alt="Quran">
+                <div class="gallery-caption"><h3>مزگه وت</h3></div>
+            </div>
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\kaaba_mecca_background.jpg" alt="Kaaba">
+                <div class="gallery-caption"><h3>که عبه</h3></div>
+            </div>
+            <div class="gallery-item">
+                <img src="c:\Users\Lenovo\OneDrive\Desktop\تێکه ڵاوه\رسمی تایبه ت به ئیسلامی\3580-11.jpg" alt="Islamic Art">
+                <div class="gallery-caption"><h3>ناوی خودا</h3></div><br><br>
+                 
+            </div>
+        
+    </section>
+
+    <!-- Fiqh Section -->
+    <section class="section" id="fiqh">
+        <h1 class="section-title">پایه کانی ئیسلام</h1>
+        
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-pray feature-icon"></i>
+                <button class="button-name" role="button"><h2>نوێژ کردن</h2></button>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fas fa-money-bill-alt feature-icon"></i>
+                <button class="button-name" role="button"><h1>زه کاتدان</h1></button>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-kaaba feature-icon"></i>
+                <button class="button-name" role="button"><h1>حه ج کردنی ماڵی خودا</h1></button>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-praying-hands feature-icon"></i>
+                <button class="button-name" role="button"><h1>رۆژووگرتن</h1></button>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-hand-holding-heart feature-icon"></i>
+                <button class="button-name" role="button"><h1>زەکات</h1></button>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-star-and-crescent feature-icon"></i>
+                <button class="button-name" role="button"><h1>شه هادەت</h1></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <hr>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="">
+                        <h4>ZANYARI ISLAM -معلومات ئیسلام- زانیاری ئیسلام </h4>
+                        
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                
+                    <div class="info-content">
+                        <h4> info@zanyariislami.com </h4>
+                    </div>
+                </div>
+                <hr>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>ژمارەی مۆبایل</h3>
+                        <h3>5446 853 0751</h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1ArDJpTZe9/?mibextid=wwXIfr"  class="social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+
+                    </a>
+                    <a href="https://www.instagram.com/ahmed__a__mulla10?igsh=eXU1Z2hqaHRsNTg4&utm_source=qr" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://t.me/+4Rob4O212KYzNjNi" class="social-link">
+                        <i class="fab fa-telegram"></i>
+
+                        
+                    </a>
+                </div>
+                <br>
+                <hr>
+                <button><h2 align="right">دامه زراندی زانیاری ئیسلامی </h2></button>
+                <button><h2 align="left">له (2022--1--7) بووه ☪️💙</h2></button>
+                <button><h2 align="center">تایبه ته به زانیارییه کانی ئيسلامى و خزمه تکردن و فێرکردن 🔷</h2></button>
+                 <br><br>
+                 <hr>
+                  <button><h2 align="right">هه رکێشه یه ک هه بوو په یوه ندی به ئێمه وه بکه ن 📱📳</h2></button>
+            </div>
+
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">ناو</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">ئیمەیڵ</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">بابەت</label>
+                    <select id="subject" required>
+                        <option value="">هەڵبژاردن...</option>
+                        <option value="question">پرسیار</option>
+                        <option value="suggestion">پێشنیار</option>
+                        <option value="feedback">بەڵگە</option>
+                        <option value="other">ئەویتر</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">پەیام</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">ناردنی پەیام</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">ZANYARI ISLAMI</div>
+                <p>زانيارى ئيسلامى سەرچاوەیەکی پڕ لە زانست و ڕێنمایی ئیسلامی بۆ هەموو موسڵمانان</p>
+                <p>هەموو مافەکان پارێزراون © 2023</p>
+            </div>
+            <div class="footer-links">
+                <h3>پەيوەنديەکان</h3>
+                <ul>
+                    <li><a href="#home">سەرەتا</a></li>
+                    <li><a href="#quran">قورئان</a></li>
+                    <li><a href="#hadith">حدیث</a></li>
+                    <li><a href="#books">پەرتووک</a></li>
+                    <li><a href="#contact">پەیوەندی</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>هەواڵنامە</h3>
+                <p>بۆ وەرگرتنی نوێترین بابەتەکان ئیمەیڵەکەت بنووسە</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="ئیمەیڵ">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>دروستکراوە بە خۆشەویستی لەلایەن تیمی زانيارى ئيسلامى</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (mobileMenu.classList.contains('active')) {
+                        mobileMenu.classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        // Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('پەیامەکەت بە سەرکەوتوویی نێردرا! سوپاس بۆ پەیوەندی کردنت.');
+                this.reset();
+            });
+        }
+
+        // Newsletter Form Submission
+        const newsletterForm = document.querySelector('.newsletter-form');
+        
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('input[type="email"]');
+                alert(`سوپاس بۆ خوێندنەوە! ئیمەیڵەکەت ${emailInput.value} بە سەرکەوتوویی تۆمارکرا.`);
+                emailInput.value = '';
+            });
+        }
+
+        // Tasbih Counter
+        const tasbihCount = document.getElementById('tasbih-count');
+        const tasbihAdd = document.getElementById('tasbih-add');
+        const tasbihReset = document.getElementById('tasbih-reset');
+        
+        let count = 0;
+        
+        tasbihAdd.addEventListener('click', () => {
+            count++;
+            tasbihCount.textContent = count;
+            
+            if (count % 33 === 0) {
+                tasbihCount.style.color = 'var(--gold)';
+                setTimeout(() => {
+                    tasbihCount.style.color = 'var(--primary-color)';
+                }, 500);
+            }
+        });
+        
+        tasbihReset.addEventListener('click', () => {
+            count = 0;
+            tasbihCount.textContent = count;
+        });
+
+        // Prayer Times Highlight
+        function updateActivePrayer() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const currentTime = hours * 60 + minutes;
+            
+            const prayerCards = document.querySelectorAll('.prayer-card');
+            prayerCards.forEach(card => card.classList.remove('active'));
+            
+            // Sample prayer times (in minutes since midnight)
+            const prayerTimes = {
+                fajr: 5 * 60 + 30,    // 5:30 AM
+                dhuhr: 12 * 60 + 30,  // 12:30 PM
+                asr: 15 * 60 + 45,    // 3:45 PM
+                maghrib: 18 * 60 + 20,// 6:20 PM
+                isha: 20 * 60         // 8:00 PM
+            };
+            
+            // Determine which prayer is currently active
+            let activePrayer = null;
+            
+            if (currentTime >= prayerTimes.fajr && currentTime < prayerTimes.dhuhr) {
+                activePrayer = 'fajr';
+            } else if (currentTime >= prayerTimes.dhuhr && currentTime < prayerTimes.asr) {
+                activePrayer = 'dhuhr';
+            } else if (currentTime >= prayerTimes.asr && currentTime < prayerTimes.maghrib) {
+                activePrayer = 'asr';
+            } else if (currentTime >= prayerTimes.maghrib && currentTime < prayerTimes.isha) {
+                activePrayer = 'maghrib';
+            } else if (currentTime >= prayerTimes.isha || currentTime < prayerTimes.fajr) {
+                activePrayer = 'isha';
+            }
+            
+            if (activePrayer) {
+                document.getElementById(activePrayer).classList.add('active');
+            }
+        }
+        
+        // Update prayer times every minute
+        updateActivePrayer();
+        setInterval(updateActivePrayer, 60000);
+
+        // Islamic Calendar Functions
+        function getCurrentHijriDate() {
+            // This is a simplified calculation - in a real app you would use a proper Hijri calendar library
+            const today = new Date();
+            const gregorianYear = today.getFullYear();
+            const gregorianMonth = today.getMonth() + 1;
+            const gregorianDay = today.getDate();
+            
+            // Approximate conversion from Gregorian to Hijri (this is not precise)
+            // The actual conversion requires complex calculations
+            const hijriYear = Math.round((gregorianYear - 622) * (33 / 32));
+            
+            // Islamic months
+            const hijriMonths = [
+                "محرم", "صفر", "ربيع الأول", "ربيع الثاني", 
+                "جمادى الأولى", "جمادى الآخرة", "رجب", 
+                "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"
+            ];
+            
+            // Calculate approximate Hijri month and day
+            // This is a very rough estimation and not accurate
+            const daysSinceHijriEpoch = Math.floor((today - new Date(622, 6, 16)) / (1000 * 60 * 60 * 24));
+            const hijriMonth = Math.floor((daysSinceHijriEpoch % 354) / 29.5);
+            const hijriDay = Math.floor(daysSinceHijriEpoch % 29.5) + 1;
+            
+            return {
+                year: hijriYear,
+                month: hijriMonth,
+                monthName: hijriMonths[hijriMonth],
+                day: hijriDay
+            };
+        }
+        
+        function updateHijriDateDisplay() {
+            const hijriDate = getCurrentHijriDate();
+            const hijriDateElement = document.getElementById('hijri-date');
+            const ramadanInfoElement = document.getElementById('ramadan-info');
+            
+            hijriDateElement.textContent = `${hijriDate.day} ${hijriDate.monthName} ${hijriDate.year} هـ`;
+            
+            // Check if it's Ramadan
+            if (hijriDate.monthName === "رمضان") {
+                ramadanInfoElement.textContent = `ئەمڕۆ ${hijriDate.day}ی مانگی ڕەمەزانە!`;
+                ramadanInfoElement.style.color = "var(--islamic-green)";
+                ramadanInfoElement.style.fontWeight = "bold";
+            } else {
+                ramadanInfoElement.textContent = "";
+            }
+        }
+        
+        // Initialize Hijri date display
+        updateHijriDateDisplay();
+        
+        // Islamic Calendar
+        function generateIslamicCalendar() {
+            const calendarGrid = document.getElementById('calendar-grid');
+            calendarGrid.innerHTML = '';
+            
+            // Add day headers
+            const days = ['یەکشەممە', 'دووشەممە', 'سێشەممە', 'چوارشەممە', 'پێنجشەممە', 'هەینی', 'شەممە'];
+            days.forEach(day => {
+                const dayHeader = document.createElement('div');
+                dayHeader.className = 'calendar-day-header';
+                dayHeader.textContent = day;
+                calendarGrid.appendChild(dayHeader);
+            });
+            
+            // Get current Hijri date
+            const hijriDate = getCurrentHijriDate();
+            
+            // Display current Hijri month and year
+            document.getElementById('hijri-month-year').textContent = `${hijriDate.monthName} ${hijriDate.year}`;
+            
+            // Add days (sample data - in a real app you would use a Hijri calendar library)
+            const totalDays = hijriDate.monthName === "رمضان" ? 30 : 29; // Ramadan has 30 days
+            const startDay = 3;   // Sample start day of week
+            
+            // Add empty cells for days before the 1st of the month
+            for (let i = 0; i < startDay; i++) {
+                const emptyDay = document.createElement('div');
+                emptyDay.className = 'calendar-day';
+                calendarGrid.appendChild(emptyDay);
+            }
+            
+            // Add days of the month
+            for (let i = 1; i <= totalDays; i++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day hijri';
+                
+                const dayNumber = document.createElement('div');
+                dayNumber.className = 'day-number';
+                dayNumber.textContent = i;
+                dayElement.appendChild(dayNumber);
+                
+                // Highlight today
+                if (i === hijriDate.day && hijriDate.monthName === document.getElementById('hijri-month-year').textContent.split(' ')[0]) {
+                    dayElement.classList.add('today');
+                }
+                
+                calendarGrid.appendChild(dayElement);
+            }
+        }
+        
+        // English Calendar
+        function generateEnglishCalendar(month, year) {
+            const englishCalendarGrid = document.getElementById('english-calendar-grid');
+            englishCalendarGrid.innerHTML = '';
+            
+            // Add day headers
+            const days = ['یه کشه مه', 'دووشه مه', 'سێ شه مه', 'چوارشه مه', 'پێنج شه مه', 'هه ینی', 'شه مه'];
+            days.forEach(day => {
+                const dayHeader = document.createElement('div');
+                dayHeader.className = 'english-calendar-day-header';
+                dayHeader.textContent = day;
+                englishCalendarGrid.appendChild(dayHeader);
+            });
+            
+            // Get first day of month and total days in month
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const today = new Date();
+            
+            // Add empty cells for days before the 1st of the month
+            for (let i = 0; i < firstDay; i++) {
+                const emptyDay = document.createElement('div');
+                emptyDay.className = 'english-calendar-day';
+                englishCalendarGrid.appendChild(emptyDay);
+            }
+            
+            // Add days of the month
+            for (let i = 1; i <= daysInMonth; i++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'english-calendar-day';
+                dayElement.textContent = i;
+                
+                // Highlight today
+                if (i === today.getDate() && month === today.getMonth() && year === today.getFullYear()) {
+                    dayElement.classList.add('today');
+                }
+                
+                englishCalendarGrid.appendChild(dayElement);
+            }
+            
+            // Update month and year display
+            const monthNames = ["مانگی (1)", "مانگی (2)", "مانگی (3)", "مانگی (4)", "مانگی (5)", "مانگی (6)",
+                               "مانگی (7)", "مانگی (8)","مانگی (9)" ,"مانگی (10)" , "مانگی (11)", "مانگی (12)"];
+            document.getElementById('english-month-year').textContent = `${monthNames[month]} ${year}`;
+        }
+        
+        // Initialize calendars
+        generateIslamicCalendar();
+        
+        // Initialize English calendar with current month
+        const currentDate = new Date();
+        let currentMonth = currentDate.getMonth();
+        let currentYear = currentDate.getFullYear();
+        generateEnglishCalendar(currentMonth, currentYear);
+        
+        // Calendar navigation
+        document.getElementById('prev-month').addEventListener('click', () => {
+            // In a real app, this would go to the previous month
+            alert('مانگی پێشوو');
+        });
+        
+        document.getElementById('next-month').addEventListener('click', () => {
+            // In a real app, this would go to the next month
+            alert('مانگی داهاتوو');
+        });
+        
+        // English calendar navigation
+        document.getElementById('english-prev-month').addEventListener('click', () => {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            generateEnglishCalendar(currentMonth, currentYear);
+        });
+        
+        document.getElementById('english-next-month').addEventListener('click', () => {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            generateEnglishCalendar(currentMonth, currentYear);
+        });
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>
